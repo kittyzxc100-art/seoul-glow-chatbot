@@ -1,0 +1,13 @@
+﻿usuario,intencion,entidades,bot,esperada,correcto
+"Hola, buenas tardes!",saludo,{},"Hola, soy el asistente virtual de Seoul Glow. Puedo ayudarte con rutinas, ingredientes, precios, envios y cambios. En que te ayudo?",saludo,True
+Que rutina me recomiendan para piel grasa?,consultar_rutina,{'tipo_piel': 'grasa'},"Para piel grasa: Dia: limpiador en gel, tonico, serum con niacinamida y protector solar. Noche: doble limpieza, exfoliante suave 2-3 veces por semana y crema ligera en gel.",consultar_rutina,True
+Para que sirve la niacinamida?,consultar_ingredientes,{'ingrediente': 'niacinamida'},"Controla la grasa, minimiza poros y pareja el tono de la piel.",consultar_ingredientes,True
+Cuanto cuesta el serum?,consultar_precio,{'producto': 'serum'},El serum cuesta $590 MXN.,consultar_precio,True
+Cuanto tarda el envio a Mexico?,consultar_envio,{},Hacemos envios a todo Mexico: llegan en 3 a 5 dias habiles con guia rastreable. El envio cuesta $99 MXN y es gratis en compras mayores a $800 MXN.,consultar_envio,True
+Quiero hacer un cambio de mi pedido 482913,soporte_posventa,{'numero_pedido': '482913'},"Ya tengo tu pedido 482913. Cuentame que paso (producto incompleto, cambio o devolucion) y te doy los siguientes pasos; tienes 5 dias desde que lo recibiste para cambios o devoluciones.",soporte_posventa,True
+Se me irrito la piel con el tonico que compre,alerta_seguridad,{'producto': 'tonico'},"Lamento escuchar eso. Por tu seguridad suspende el uso del producto de inmediato, enjuaga la zona con agua tibia y evita el sol directo. Te voy a canalizar con una persona del equipo para dar seguimiento a tu caso; esto no sustituye una valoracion con un dermatologo.",alerta_seguridad,True
+"Mi piel es sensible, que rutina me recomiendas?",consultar_rutina,{'tipo_piel': 'sensible'},"Para piel sensible: Dia: limpiador sin fragancia, tonico calmante con centella asiatica, crema y protector solar mineral. Noche: limpieza suave, serum calmante y crema reparadora.",consultar_rutina,True
+El retinol se puede usar de dia?,consultar_ingredientes,{'ingrediente': 'retinol'},Renueva la piel y suaviza lineas finas; se usa de noche y siempre con protector solar al dia siguiente.,consultar_ingredientes,True
+Quiero cancelar mi contrato de telefonia,soporte_posventa,{},"Para ayudarte con tu cambio, devolucion o pedido, pasame tu numero de pedido (6 digitos).",fallback,False
+Cual es la capital de Francia?,fallback,{},"No estoy segura de haber entendido bien. Puedo ayudarte con rutinas, ingredientes, precios, envios o cambios/devoluciones. Sobre cual quieres que te ayude?",fallback,True
+"Gracias, hasta luego",despedida,{},Gracias por escribir a Seoul Glow. Que tengas un dia con mucho glow.,despedida,True

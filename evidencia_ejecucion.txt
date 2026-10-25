@@ -1,0 +1,80 @@
+======================================================================
+EJECUCION DE PRUEBAS - Asistente virtual Seoul Glow
+======================================================================
+
+--- Conversacion 1 ---
+Tu : Hola, buenas tardes!
+Bot: Hola, soy el asistente virtual de Seoul Glow. Puedo ayudarte con rutinas, ingredientes, precios, envios y cambios. En que te ayudo?
+
+--- Conversacion 2 ---
+Tu : Que rutina me recomiendan para piel grasa?
+Bot: Para piel grasa: Dia: limpiador en gel, tonico, serum con niacinamida y protector solar. Noche: doble limpieza, exfoliante suave 2-3 veces por semana y crema ligera en gel.
+
+--- Conversacion 3 ---
+Tu : Para que sirve la niacinamida?
+Bot: Controla la grasa, minimiza poros y pareja el tono de la piel.
+
+--- Conversacion 4 ---
+Tu : Cuanto cuesta el serum?
+Bot: El serum cuesta $590 MXN.
+
+--- Conversacion 5 ---
+Tu : Cuanto tarda el envio a Mexico?
+Bot: Hacemos envios a todo Mexico: llegan en 3 a 5 dias habiles con guia rastreable. El envio cuesta $99 MXN y es gratis en compras mayores a $800 MXN.
+
+--- Conversacion 6 ---
+Tu : Quiero hacer un cambio de mi pedido 482913
+Bot: Ya tengo tu pedido 482913. Cuentame que paso (producto incompleto, cambio o devolucion) y te doy los siguientes pasos; tienes 5 dias desde que lo recibiste para cambios o devoluciones.
+
+--- Conversacion 7 ---
+Tu : Se me irrito la piel con el tonico que compre
+Bot: Lamento escuchar eso. Por tu seguridad suspende el uso del producto de inmediato, enjuaga la zona con agua tibia y evita el sol directo. Te voy a canalizar con una persona del equipo para dar seguimiento a tu caso; esto no sustituye una valoracion con un dermatologo.
+
+--- Conversacion 8 ---
+Tu : Mi piel es sensible, que rutina me recomiendas?
+Bot: Para piel sensible: Dia: limpiador sin fragancia, tonico calmante con centella asiatica, crema y protector solar mineral. Noche: limpieza suave, serum calmante y crema reparadora.
+
+--- Conversacion 9 ---
+Tu : El retinol se puede usar de dia?
+Bot: Renueva la piel y suaviza lineas finas; se usa de noche y siempre con protector solar al dia siguiente.
+
+--- Conversacion 10 ---
+Tu : Quiero cancelar mi contrato de telefonia
+Bot: Para ayudarte con tu cambio, devolucion o pedido, pasame tu numero de pedido (6 digitos).
+
+--- Conversacion 11 ---
+Tu : Cual es la capital de Francia?
+Bot: No estoy segura de haber entendido bien. Puedo ayudarte con rutinas, ingredientes, precios, envios o cambios/devoluciones. Sobre cual quieres que te ayude?
+
+--- Conversacion 12 ---
+Tu : Gracias, hasta luego
+Bot: Gracias por escribir a Seoul Glow. Que tengas un dia con mucho glow.
+
+======================================================================
+TABLA DE RESULTADOS
+======================================================================
+                                        usuario              intencion               esperada  correcto
+                           Hola, buenas tardes!                 saludo                 saludo      True
+     Que rutina me recomiendan para piel grasa?       consultar_rutina       consultar_rutina      True
+                 Para que sirve la niacinamida? consultar_ingredientes consultar_ingredientes      True
+                        Cuanto cuesta el serum?       consultar_precio       consultar_precio      True
+                Cuanto tarda el envio a Mexico?        consultar_envio        consultar_envio      True
+     Quiero hacer un cambio de mi pedido 482913       soporte_posventa       soporte_posventa      True
+  Se me irrito la piel con el tonico que compre       alerta_seguridad       alerta_seguridad      True
+Mi piel es sensible, que rutina me recomiendas?       consultar_rutina       consultar_rutina      True
+               El retinol se puede usar de dia? consultar_ingredientes consultar_ingredientes      True
+       Quiero cancelar mi contrato de telefonia       soporte_posventa               fallback     False
+                 Cual es la capital de Francia?               fallback               fallback      True
+                           Gracias, hasta luego              despedida              despedida      True
+
+======================================================================
+METRICAS
+======================================================================
+Precision de intencion: 92% (11/12 casos)
+Tasa de fallback: 8%
+
+Casos con error (1):
+                                 usuario        intencion esperada
+Quiero cancelar mi contrato de telefonia soporte_posventa fallback
+
+Casos guardados en /home/claude/chatbot_proyecto/repo/pruebas/casos.csv
