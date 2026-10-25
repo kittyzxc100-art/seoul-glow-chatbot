@@ -43,18 +43,16 @@ de stopwords en espaniol definida a mano. La logica de deteccion
 
 ```
 seoul-glow-chatbot/
-├── README.md            este archivo
-├── chatbot.ipynb         cuaderno de Colab, ya ejecutado de principio a fin
-├── intenciones.py        base de conocimiento (intenciones, entidades, precios, rutinas)
-├── chatbot.py             motor del chatbot (preprocesar, detectar_intencion, extraer_entidades, responder)
-├── make_diagramas.py      genera los diagramas de arquitectura y de flujo
-├── graficas/
-│   ├── diagrama_arquitectura.png
-│   └── diagrama_flujo.png
-└── pruebas/
-    ├── ejecutar_pruebas.py     corre 12 conversaciones y calcula metricas
-    ├── casos.csv               resultado de esa corrida (mensaje, intencion detectada, esperada, correcto)
-    └── evidencia_ejecucion.txt salida real de ejecutar_pruebas.py
+├── README.md                  este archivo
+├── chatbot.ipynb               cuaderno de Colab, ya ejecutado de principio a fin
+├── intenciones.py               base de conocimiento (intenciones, entidades, precios, rutinas)
+├── chatbot.py                    motor del chatbot (preprocesar, detectar_intencion, extraer_entidades, responder)
+├── make_diagramas.py             genera los diagramas de arquitectura y de flujo
+├── diagrama_arquitectura.png
+├── diagrama_flujo.png
+├── ejecutar_pruebas.py            corre 12 conversaciones y calcula metricas
+├── casos.csv                      resultado de esa corrida (mensaje, intencion detectada, esperada, correcto)
+└── evidencia_ejecucion.txt        salida real de ejecutar_pruebas.py
 ```
 
 ## Como correrlo
@@ -68,7 +66,7 @@ fuera de lo que ya trae Colab.
 ```bash
 pip install nltk pandas --break-system-packages
 python3 chatbot.py              # chat interactivo
-python3 pruebas/ejecutar_pruebas.py   # corre las 12 conversaciones de prueba y muestra metricas
+python3 ejecutar_pruebas.py     # corre las 12 conversaciones de prueba y muestra metricas
 ```
 
 ## Resultados de la ultima corrida de pruebas
